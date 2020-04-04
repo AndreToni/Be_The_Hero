@@ -26,9 +26,6 @@
 </h4>
 
 <p align="center">
-  <a href="https://insomnia.rest/run/?label=SemanaOmnistack11&amp;uri=https%3A%2F%2Fraw.githubusercontent.com%2FDanielObara%2FSemanaOmnistack11%2Fmaster%2FInsomnia_2020-03-24.json" rel="nofollow"><img src="https://camo.githubusercontent.com/a47cc6a6b74e0edbba2a73d2f727eaf4ccd1d855/68747470733a2f2f696e736f6d6e69612e726573742f696d616765732f72756e2e737667" alt="Run in Insomnia" data-canonical-src="https://insomnia.rest/images/run.svg" style="max-width:100%;"></a>
-</p>
-<p align="center">
   <a href="#-project">Project</a>   |   
   <a href="#rocket-Technologies">Technologies</a>   |   
   <a href="#-layout">Layout</a>   |   
