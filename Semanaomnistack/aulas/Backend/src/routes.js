@@ -11,6 +11,7 @@ const routes = express.Router();
 routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);
+
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
@@ -33,7 +34,16 @@ routes.get('/incidents', celebrate({
     })
 }), IncidentController.index);
 
-routes.post('/incidents', IncidentController.create);
+routes.post('/incidents', celebrate({
+    [Segments.BODY]: Joi.object().keys({
+        title: Joi.string().max(50).required(),
+        description: Joi.string().max(1000).required(),
+        value: Joi.number().required()
+    }),
+    [Segments.HEADERS]: Joi.object({
+        authorization: Joi.string().required(),
+    }).unknown(),
+}), IncidentController.create);
 
 routes.delete('/incidents/:id', celebrate({ 
     [Segments.PARAMS]: Joi.object().keys({
